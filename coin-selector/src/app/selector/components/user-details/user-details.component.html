@@ -1,0 +1,75 @@
+<div class="row" *ngIf="(user$|async) === null">
+    <div class="alert alert-dismissible alert-danger">
+        <strong>Oh error happend! </strong> <a [routerLink]="['/']" class="alert-link">go back!</a> 
+        <hr />
+        {{error$|async}}
+    </div>
+</div>
+<div class="container" *ngIf="user$|async as user">
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h6>User Name</h6>
+        </div>
+        <div class="col-md-8">
+            {{user?.userName}}
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h6>Currency</h6>
+        </div>
+        <div class="col-md-8">
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="BTC" (click)="refresh('BTC')" autocomplete="off" [attr.checked]="user?.price?.buy === 'BTC'?'':null">
+                <label class="btn btn-outline-success" for="BTC">
+                    <svg class="coin"><use xlink:href="assets/imgs/coins.svg#BTC" href="assets/imgs/coins.svg#BTC"></use></svg>
+                </label>
+                <input type="radio" class="btn-check" name="btnradio" id="ETH" (click)="refresh('ETH')" autocomplete="off" [attr.checked]="user?.price?.buy === 'ETH'?'':null">
+                <label class="btn btn-outline-success" for="ETH">
+                    <svg class="coin"><use xlink:href="assets/imgs/coins.svg#ETH" href="assets/imgs/coins.svg#ETH"></use></svg>
+                </label>
+                <input type="radio" class="btn-check" name="btnradio" id="XRP" (click)="refresh('XRP')" autocomplete="off" [attr.checked]="user?.price?.buy === 'XRP'?'':null">
+                <label class="btn btn-outline-success" for="XRP">
+                    <svg class="coin"><use xlink:href="assets/imgs/coins.svg#XRP" href="assets/imgs/coins.svg#XRP"></use></svg>
+                </label>
+                <input type="radio" class="btn-check" name="btnradio" id="DOGE" (click)="refresh('DOGE')" autocomplete="off" [attr.checked]="user?.price?.buy === 'DOGE'?'':null">
+                <label class="btn btn-outline-success" for="DOGE">
+                    <svg class="coin"><use xlink:href="assets/imgs/coins.svg#DOGE" href="assets/imgs/coins.svg#DOGE"></use></svg>
+                </label>
+              </div> 
+        </div>
+    </div>
+    <div class="row" *ngIf="user?.price?.timestamp !== null">
+        <h3>Prices</h3>
+        <div class="col">
+            <table class="table">
+                <tr>
+                    <th>Sell</th>
+                    <td>{{user?.price?.sell}}</td>
+                </tr>
+                <tr>
+                    <th>Ask</th>
+                    <td>{{user?.price?.ask}}</td>
+                </tr>
+                <tr>
+                    <th>Bid</th>
+                    <td>{{user?.price?.bid}}</td>
+                </tr>
+                <tr>
+                    <th>Rate</th>
+                    <td>{{user?.price?.rate}}</td>
+                </tr>
+                <tr>
+                    <th>Spot rate</th>
+                    <td>{{user?.price?.spotRate}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-outline-success" (click)="refresh(user?.price?.buy??'')"><fa-icon [icon]="['fas', 'rotate']"></fa-icon> Refresh</button>
+            <button type="button" class="btn btn-outline-secondary" (click)="return()"><fa-icon [icon]="['fas', 'house']"></fa-icon> Return</button>
+        </div>
+    </div>
+</div>

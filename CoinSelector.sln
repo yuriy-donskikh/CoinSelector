@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSelector.Api", "CoinSelector.Api\CoinSelector.Api.csproj", "{BB4E9E96-824F-40E3-9B79-C650E75C5F5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSelector.Data", "CoinSelector.Data\CoinSelector.Data.csproj", "{E8A589B8-F778-4C04-B4F0-2F328F0B2048}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSelector.Models", "CoinSelector.Models\CoinSelector.Models.csproj", "{CE5CCC85-8741-4BAD-8162-EC77A654F8F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinSelector.Services", "CoinSelector.Services\CoinSelector.Services.csproj", "{B4160F60-A178-4A74-9B2D-F6313FF31DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSelector.UnitTests", "CoinSelector.UnitTests\CoinSelector.UnitTests.csproj", "{C47CDFC5-B337-44CA-B497-8D6DC2EF6D8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB4E9E96-824F-40E3-9B79-C650E75C5F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB4E9E96-824F-40E3-9B79-C650E75C5F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB4E9E96-824F-40E3-9B79-C650E75C5F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB4E9E96-824F-40E3-9B79-C650E75C5F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A589B8-F778-4C04-B4F0-2F328F0B2048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A589B8-F778-4C04-B4F0-2F328F0B2048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A589B8-F778-4C04-B4F0-2F328F0B2048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A589B8-F778-4C04-B4F0-2F328F0B2048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5CCC85-8741-4BAD-8162-EC77A654F8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5CCC85-8741-4BAD-8162-EC77A654F8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5CCC85-8741-4BAD-8162-EC77A654F8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5CCC85-8741-4BAD-8162-EC77A654F8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4160F60-A178-4A74-9B2D-F6313FF31DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4160F60-A178-4A74-9B2D-F6313FF31DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4160F60-A178-4A74-9B2D-F6313FF31DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4160F60-A178-4A74-9B2D-F6313FF31DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47CDFC5-B337-44CA-B497-8D6DC2EF6D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47CDFC5-B337-44CA-B497-8D6DC2EF6D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47CDFC5-B337-44CA-B497-8D6DC2EF6D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47CDFC5-B337-44CA-B497-8D6DC2EF6D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A37AF251-72F6-45BD-A5A7-20243594480C}
+	EndGlobalSection
+EndGlobal

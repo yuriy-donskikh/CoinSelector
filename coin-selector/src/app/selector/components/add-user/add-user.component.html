@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+      Add new User
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="saveUser()"
+            [formGroup]="userForm">
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="userNameId">User Name</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="userNameId"
+                   type="text"
+                   placeholder="Name (required)"
+                   formControlName="userName" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="currencyId">Currency</label>
+          <div class="col-md-8">
+            <select class="form-select" id="currencyId" formControlName="currency">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="XRP">Ripple (XRP)</option>
+                <option value="DOGE">Dogecoin (DOGE)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <div class="offset-md-2 col-md-4">
+              <button class="btn btn-outline-success mr-3"
+                      type="submit"
+                      [disabled]="!userForm.valid">
+                Save
+              </button>
+            </div>
+          </div>
+
+        </form>
+    </div>
+  
+    <!-- <div class="alert alert-danger"
+         *ngIf="errorMessage">{{errorMessage}}
+    </div> -->
+  </div>

@@ -1,0 +1,9 @@
+﻿global using CoinSelector.Data;
+global using CoinSelector.Data.Seeders;
+global using CoinSelector.Services.Exceptions;
+global using CoinSelector.Services.Interfaces;
+global using CoinSelector.Services.Mappers;
+global using CoinSelector.Services.Services;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Refit;

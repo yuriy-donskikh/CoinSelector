@@ -1,0 +1,17 @@
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+            <th scope="col">User Name</th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let userInfo of userInfo$ | async">
+                <td (click)="userDetails(userInfo.id)">{{userInfo.userName}}</td>
+                <td><button type="button" class="btn btn-outline-secondary btn-sm" (click)="deleteUser(userInfo.id)"><fa-icon [icon]="['fas', 'trash-can']"></fa-icon></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <button type="button" class="btn btn-outline-success" (click)="newUser()"><fa-icon [icon]="['fas', 'user-plus']"></fa-icon> Add new User</button>
+</div>
